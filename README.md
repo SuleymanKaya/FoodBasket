@@ -1,2 +1,2 @@
 # Food Basket
-Food Basket ASP.NET Core MVC Project
+Food Basket is ASP.NET Core MVC e-commerce Aplication
