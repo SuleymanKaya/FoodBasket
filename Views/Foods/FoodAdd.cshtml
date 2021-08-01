@@ -1,0 +1,38 @@
+﻿@model FoodBasket.Data.Models.ImageAdd
+@{
+    ViewData["Title"] = "FoodAdd";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Food Add Page</h1>
+<br />
+<form class="form-group" action="FoodAdd" asp-controller="Foods" method="post" enctype="multipart/form-data">
+    @Html.Label("Food Name")
+    <br />
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    <br />
+    @Html.Label("Description")
+    <br />
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+    @Html.Label("Price")
+    <br />
+    @Html.TextBoxFor(x => x.Price, new { @class = "form-control" })
+    <br />
+    @Html.Label("Image")
+    <br />
+    @*@Html.TextBoxFor(x => x.ImageURL, new { @class = "form-control" })*@
+    <input type="file" name="ImageURL" />
+    <br />
+    @Html.Label("Stock")
+    <br />
+    @Html.TextBoxFor(x => x.Stock, new { @class = "form-control" })
+    <br />
+    @Html.Label("Category Name")
+    <br />
+    @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.ctv, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Save Changes</button>
+</form>
+
+

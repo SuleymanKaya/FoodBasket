@@ -1,0 +1,149 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!--
+author: W3layouts
+author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food Basket Category Details</title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Grocery Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript">
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+               function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //for-mobile-apps -->
+    <link href="~/web2/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/web2/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- font-awesome icons -->
+    <link href="~/web2/css/font-awesome.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- //font-awesome icons -->
+    <!-- js -->
+    <script src="~/web2/js/jquery-1.11.1.min.js"></script>
+    <!-- //js -->
+    <link href='//fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <!-- start-smoth-scrolling -->
+    <script type="text/javascript" src="~/web2/js/move-top.js"></script>
+    <script type="text/javascript" src="~/web2/js/easing.js"></script>
+    <script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+    </script>
+    <!-- start-smoth-scrolling -->
+</head>
+
+<body>
+    <!-- //script-for sticky-nav -->
+    <div class="logo_products">
+        <div class="container">
+            <div class="w3ls_logo_products_left">
+                <h1><a href="~/Showcases/index"><span>Food</span>Basket</a></h1>
+            </div>
+            <div class="w3ls_logo_products_left1">
+                <ul class="special_items">
+                    <li><a href="~/web2/events.html">Events</a><i>/</i></li>
+                    <li><a href="~/web2/bout.html">About Us</a><i>/</i></li>
+                    <li><a href="~/web2/products.html">Best Deals</a><i>/</i></li>
+                    <li><a href="~/web2/services.html">Services</a><i>/</i></li>
+                    <li><a href="/Charts/Statistics/">Admin Panel</a></li>
+                </ul>
+            </div>
+            <div class="w3ls_logo_products_left1">
+                <ul class="phone_email">
+                    <li><i class="fa fa-phone" aria-hidden="true"></i>(+0123) 234 567</li>
+                    <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:store@foodbasket.com">store@foodbasket.com</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <!-- //header -->
+    <!-- banner -->
+    <div class="banner">
+        <div class="w3l_banner_nav_left">
+            <nav class="navbar nav_bottom">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header nav_2">
+                    <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                @await Component.InvokeAsync("CategoryGetList")
+                <!-- /.navbar-collapse -->
+            </nav>
+        </div>
+        <div class="w3l_banner_nav_right">
+            <section class="slider">
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li>
+                            <div class="w3l_banner_nav_right_banner">
+                                <h3>Make your <span>food</span> with Spicy.</h3>
+                                <div class="more">
+                                    <a href="~/web2/products.html" class="button--saqui button--round-l button--text-thick" data-text="Shop now">Shop now</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="w3l_banner_nav_right_banner1">
+                                <h3>Make your <span>food</span> with Spicy.</h3>
+                                <div class="more">
+                                    <a href="~/web2/products.html" class="button--saqui button--round-l button--text-thick" data-text="Shop now">Shop now</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="w3l_banner_nav_right_banner2">
+                                <h3>upto <i>50%</i> off.</h3>
+                                <div class="more">
+                                    <a href="~/web2/products.html" class="button--saqui button--round-l button--text-thick" data-text="Shop now">Shop now</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- flexSlider -->
+            <link rel="stylesheet" href="~/web2/css/flexslider.css" type="text/css" media="screen" property="" />
+            <script defer src="~/web2/js/jquery.flexslider.js"></script>
+            <script type="text/javascript">
+				$(window).load(function(){
+				  $('.flexslider').flexslider({
+					animation: "slide",
+					start: function(slider){
+					  $('body').removeClass('loading');
+					}
+				  });
+				});
+            </script>
+            <!-- //flexSlider -->
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    
+    <div class="top-brands">
+        <div class="container">
+            <h3>Hot Offers</h3>
+            @await Component.InvokeAsync("FoodListByCategory", new { id = ViewBag.x })
+        </div>
+    </div>  
+</body>
+</html>

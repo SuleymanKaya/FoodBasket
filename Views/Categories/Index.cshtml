@@ -1,0 +1,41 @@
+﻿@using FoodBasket.Data.Models
+@model List<Category>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Category List</h1>
+<br />
+@using (Html.BeginForm()) 
+{
+    <p>
+        Category Name: @Html.TextBox("cn")
+        <input type="submit" value="find"/>
+    </p>
+}
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Category Name</th>
+        <th>Category Description</th>
+        <th>Status</th>
+        <th>Delete</th>
+        <th>Update</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <th>@x.Id</th>
+            <td>@x.CategoryName</td>
+            <td>@x.CategoryDescription</td>
+            <td>@x.Status</td>
+            <td><a href="/Categories/CategoryDelete/@x.Id" class="btn btn-danger">Delete</a></td>
+            <td><a href="/Categories/CategoryGet/@x.Id" class="btn btn-success">Update</a></td>
+        </tr>
+        }
+
+</table>
+<a href="/Categories/CategoryAdd/" class="btn btn-primary">New Category</a>
+
